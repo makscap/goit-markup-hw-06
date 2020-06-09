@@ -82,7 +82,23 @@
           эффективные решения<br />
           для вашего бизнеса
         </h1>
-        <a href="" class="page-hero__button">Заказать услугу</a>
+
+        <button data-open-modal>Заказать услугу</button>
+
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti
+              recusandae aut quam ipsum. Quas, voluptates! Quibusdam deserunt
+              consequuntur adipisci tempore maxime sed eveniet, eius omnis, ab
+              assumenda odit reiciendis vero.
+            </p>
+            <button data-close-modal>Закрыть</button>
+          </div>
+        </div>
+
+        <!-- <a href="" class="page-hero__button">Заказать услугу</a>
+       -->
       </section>
 
       <!-- Выбор компании -->
@@ -668,15 +684,26 @@
 
         <section class="subscribe-section">
           <h3 class="subscribe__title">подписаться на рассылку</h3>
-          <div class="button-div">
-            <input type="text" placeholder="E-mail" class="subscribe__input" />
-            <button class="subscribe__button">
-              Подписаться
-              <svg class="svg-send">
-                <use href="./images/sprite.svg#icon-send"></use>
-              </svg>
-            </button>
-          </div>
+
+          <form class="js-speaker-form">
+            <div class="button-div">
+              <!-- <label for="mail">подписаться на рассылку</label> -->
+              <input
+                type="email"
+                name="mail"
+                id="mail"
+                placeholder="E-mail"
+                class="subscribe__input"
+              />
+              <button class="subscribe__button">
+                Подписаться
+                <svg class="svg-send">
+                  <use href="./images/sprite.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+
           <!-- </div> -->
         </section>
       </div>
@@ -685,5 +712,28 @@
         <p class="copyright__text">2020 | Developed by GoIT Students</p>
       </div>
     </footer>
+
+    <!-- СКРИПТ ДЛЯ ТОГО ЧТОБ УВИДЕТЬ КАК ОТПРАВЛЯЕТ ДАННЫЕ ПОЧТА БЕЗ ПЕРЕЗАГРУЗКИ СТРАНИЦЫ. ПОЗЖЕ УДАЛИТЬ!!!! И УДАЛИТЬ КЛАСС В "ФОРМ" СКРИПТА!
+     -->
+    <!-- 
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script> -->
+
+    <!-- Скрипт на МОДАЛКУ -->
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
