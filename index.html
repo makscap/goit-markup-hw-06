@@ -139,7 +139,7 @@
 
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
-            <button>
+            <button class="modal__button-close" data-modal-close>
               <svg class="svg-close">
                 <use href="./images/sprite.svg#svg-close"></use>
               </svg>
@@ -191,13 +191,18 @@
               </label>
 
               <label class="form-field">
-                <input
+                <!-- <input
                   type="text"
                   name="textarea"
-                  class="form-input"
+                  class="form-input form-input--comment"
                   placeholder=" "
-                />
-                <span class="form-label">Комментарий</span>
+                /> -->
+                <textarea
+                  class="form-input form-input--comment"
+                  name="comment"
+                  placeholder=" "
+                ></textarea>
+                <span class="form-label--comment">Комментарий</span>
               </label>
 
               <label class="form-field-checkbox">
@@ -207,14 +212,14 @@
                   name="topic"
                   value="check"
                 />
-
+                <span class="icon"></span>
                 <p class="checkbox-text">
                   Соглашаюсь с рассылкой и принимаю
                   <a href="" class="checkbox-link">Условия договора</a>
                 </p>
               </label>
 
-              <button class="page-hero__button">Отправить</button>
+              <button class="modal__button-send">Отправить</button>
 
               <!-- <button class="page-hero__button" data-modal-close>
                 Закрыть
