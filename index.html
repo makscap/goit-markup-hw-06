@@ -83,17 +83,143 @@
           для вашего бизнеса
         </h1>
 
-        <button data-open-modal>Заказать услугу</button>
+        <button class="page-hero__button" data-modal-open>
+          Заказать услугу
+        </button>
+
+        <!-- <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <h2 class="modal__label">
+              Оставьте свои данные, мы вам перезвоним
+            </h2>
+            <label for="name">Имя</label>
+            <div class="modal__position">
+              <div class="modal__margin">
+               <form class="js-speaker-form"></form>
+                  <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Имя"
+                  autofocus
+                />
+              </div>
+              <div class="modal__margin">
+                <input type="tel" name="tel" id="tel" placeholder="Телефон" />
+              </div>
+              <div class="modal__margin">
+                <input
+                  type="email"
+                  name="mail"
+                  id="mail"
+                  placeholder="E-mail"
+                />
+              </div>
+              <div class="modal__margin">
+                <input
+                  type="text"
+                  name="textarea"
+                  id="textarea"
+                  placeholder="Комментарий"
+                />
+              </div>
+              <div class="modal__position">
+                <input type="checkbox" name="topic" value="check" id="check" />
+                <label for="check"
+                  >Соглашаюсь с рассылкой и принимаю Условия договора</label
+                >
+                <button class="page-hero__button">Отправить</button>
+              </div>
+              <button class="page-hero__button" data-modal-close>
+                Закрыть
+              </button></form>
+            </div>
+          </div>
+        </div> -->
 
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti
-              recusandae aut quam ipsum. Quas, voluptates! Quibusdam deserunt
-              consequuntur adipisci tempore maxime sed eveniet, eius omnis, ab
-              assumenda odit reiciendis vero.
-            </p>
-            <button data-close-modal>Закрыть</button>
+            <button>
+              <svg class="svg-close">
+                <use href="./images/sprite.svg#svg-close"></use>
+              </svg>
+            </button>
+            <form class="js-speaker-form form">
+              <h2 class="modal__topic">
+                Оставьте свои данные, мы вам перезвоним
+              </h2>
+              <label class="form-field">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-input"
+                  placeholder=" "
+                />
+
+                <span class="form-label">Имя</span>
+                <svg class="svg-modal">
+                  <use href="./images/sprite.svg#modal-person"></use>
+                </svg>
+              </label>
+
+              <label class="form-field">
+                <input
+                  type="tel"
+                  name="tel"
+                  class="form-input"
+                  placeholder=" "
+                />
+
+                <span class="form-label">Телефон</span>
+                <svg class="svg-modal">
+                  <use href="./images/sprite.svg#modal-phone"></use>
+                </svg>
+              </label>
+
+              <label class="form-field">
+                <input
+                  type="email"
+                  name="mail"
+                  class="form-input"
+                  placeholder=" "
+                />
+
+                <span class="form-label">Почта</span>
+                <svg class="svg-modal">
+                  <use href="./images/sprite.svg#modal-email"></use>
+                </svg>
+              </label>
+
+              <label class="form-field">
+                <input
+                  type="text"
+                  name="textarea"
+                  class="form-input"
+                  placeholder=" "
+                />
+                <span class="form-label">Комментарий</span>
+              </label>
+
+              <label class="form-field-checkbox">
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  name="topic"
+                  value="check"
+                />
+
+                <p class="checkbox-text">
+                  Соглашаюсь с рассылкой и принимаю
+                  <a href="" class="checkbox-link">Условия договора</a>
+                </p>
+              </label>
+
+              <button class="page-hero__button">Отправить</button>
+
+              <!-- <button class="page-hero__button" data-modal-close>
+                Закрыть
+              </button> -->
+            </form>
           </div>
         </div>
 
